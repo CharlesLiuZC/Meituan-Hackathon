@@ -1,0 +1,116 @@
+{
+  "round": 8,
+  "best_penalty": 1067.4169938999999,
+  "history": [
+    {
+      "round": 0,
+      "timestamp": "2026-05-31 00:19:02",
+      "avg_penalty": 1072.1601466,
+      "best_penalty": 1072.1601466,
+      "improved": true,
+      "no_improve_count": 0,
+      "injected": 0,
+      "total_injected": 0,
+      "round_seconds": 794.3,
+      "training_cases": 8
+    },
+    {
+      "round": 1,
+      "timestamp": "2026-05-31 00:32:23",
+      "avg_penalty": 1072.1333994000001,
+      "best_penalty": 1072.1333994000001,
+      "improved": true,
+      "no_improve_count": 0,
+      "injected": 0,
+      "total_injected": 0,
+      "round_seconds": 801.4,
+      "training_cases": 8
+    },
+    {
+      "round": 2,
+      "timestamp": "2026-05-31 00:45:00",
+      "avg_penalty": 1067.4169938999999,
+      "best_penalty": 1067.4169938999999,
+      "improved": true,
+      "no_improve_count": 0,
+      "injected": 0,
+      "total_injected": 0,
+      "round_seconds": 756.7,
+      "training_cases": 8
+    },
+    {
+      "round": 3,
+      "timestamp": "2026-05-31 01:10:08",
+      "avg_penalty": 1074.3063901,
+      "best_penalty": 1067.4169938999999,
+      "improved": false,
+      "no_improve_count": 1,
+      "injected": 4,
+      "total_injected": 4,
+      "round_seconds": 824.2,
+      "training_cases": 8
+    },
+    {
+      "round": 4,
+      "timestamp": "2026-05-31 01:25:45",
+      "avg_penalty": 1610.3288531,
+      "best_penalty": 1067.4169938999999,
+      "improved": false,
+      "no_improve_count": 2,
+      "injected": 0,
+      "total_injected": 4,
+      "round_seconds": 937.1,
+      "training_cases": 8
+    },
+    {
+      "round": 5,
+      "timestamp": "2026-05-31 01:42:33",
+      "avg_penalty": 1072.8644828000001,
+      "best_penalty": 1067.4169938999999,
+      "improved": false,
+      "no_improve_count": 3,
+      "injected": 0,
+      "total_injected": 4,
+      "round_seconds": 1008.2,
+      "training_cases": 8
+    },
+    {
+      "round": 6,
+      "timestamp": "2026-05-31 01:59:44",
+      "avg_penalty": 1079.3793329,
+      "best_penalty": 1067.4169938999999,
+      "improved": false,
+      "no_improve_count": 4,
+      "injected": 4,
+      "total_injected": 8,
+      "round_seconds": 1031.7,
+      "training_cases": 8
+    },
+    {
+      "round": 7,
+      "timestamp": "2026-05-31 02:14:59",
+      "avg_penalty": 2092.7395841999996,
+      "best_penalty": 1067.4169938999999,
+      "improved": false,
+      "no_improve_count": 5,
+      "injected": 0,
+      "total_injected": 8,
+      "round_seconds": 914.6,
+      "training_cases": 8
+    },
+    {
+      "round": 8,
+      "timestamp": "2026-05-31 02:32:47",
+      "avg_penalty": 1197.609964,
+      "best_penalty": 1067.4169938999999,
+      "improved": false,
+      "no_improve_count": 6,
+      "injected": 0,
+      "total_injected": 8,
+      "round_seconds": 1067.6,
+      "training_cases": 8
+    }
+  ],
+  "no_improve_count": 6,
+  "total_injected": 8
+}
