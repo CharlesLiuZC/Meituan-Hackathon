@@ -6,6 +6,14 @@ from typing import Any
 
 INF = float("inf")
 
+# Official objective per the repo README / common/evaluator.py:
+# objective_score = total_score + 100 * missing_tasks, where total_score sums
+# EVERY assigned candidate (all backup couriers included). This differs from
+# penalty_score (sequential-acceptance expected penalty, which the solver's
+# multi-courier architecture optimizes). Both are reported; the real judge's
+# semantics decide which one gates promotions.
+OFFICIAL_MISSING_PENALTY = 100.0
+
 
 def split_tasks(task_str: str) -> list[str]:
     return [t.strip() for t in task_str.split(",") if t.strip()]
@@ -94,6 +102,7 @@ def evaluate_output(input_text: str, solution: Any) -> dict[str, Any]:
         "total_tasks": len(all_tasks),
         "missing_tasks": len(missing),
         "total_score": round(total_score, 6),
+        "objective_score": round(total_score + OFFICIAL_MISSING_PENALTY * len(missing), 6),
         "penalty_score": round(penalty_score, 6),
         "parallel_penalty_score": round(parallel_penalty_score, 6),
         "duplicate_tasks": duplicate_tasks,

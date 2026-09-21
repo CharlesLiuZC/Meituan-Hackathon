@@ -17,7 +17,7 @@ ANCHOR_REL="data/official/large_seed301.txt"; ANCHOR_KEY="anchor:large_seed301"
 
 def slim_metrics(m):
     if not isinstance(m,dict): return {"ok":False}
-    keys=("ok","valid","penalty_score","covered_tasks","total_tasks","elapsed_ms","case_type","error")
+    keys=("ok","valid","penalty_score","objective_score","covered_tasks","total_tasks","elapsed_ms","case_type","error")
     return {k:m.get(k) for k in keys if k in m}
 
 class Reporter:

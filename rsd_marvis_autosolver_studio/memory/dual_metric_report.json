@@ -1,0 +1,32 @@
+[
+ {
+  "case": "anchor",
+  "penalty": 626.32,
+  "official": 1160.27
+ },
+ {
+  "case": "holdout:medium",
+  "penalty": 401.73,
+  "official": 1048.9
+ },
+ {
+  "case": "holdout:high_noise",
+  "penalty": 299.69,
+  "official": 730.23
+ },
+ {
+  "case": "holdout:large",
+  "penalty": 616.89,
+  "official": 1117.95
+ },
+ {
+  "case": "holdout:low_willingness",
+  "penalty": 1695.9,
+  "official": 3739.95
+ },
+ {
+  "case": "holdout:scarce_couriers",
+  "penalty": 1199.15,
+  "official": 669.59
+ }
+]
