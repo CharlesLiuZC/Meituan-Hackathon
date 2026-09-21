@@ -1020,3 +1020,39 @@ operator pool += learned op `low_willingness_worst_metric_boost`
   （code_evolution 曾显示 -inf）。credit_operator 现夹取 [-50,+50]，新增
   repair_operator_stats() 从 trials 重算——已修复存量数据（37 用 18 胜，UCB 2.0）。
 - 双晋升日战果保持：anchor 626.32 / medium 403.07 / large 616.89，solver 70.53KB。
+
+## 2026-09-20 · ⚠️ 双口径发现：官方 objective 与概率 penalty 几乎对偶（重大决策点）
+
+仓库 README/common/evaluator.py 定义的官方口径：objective = total_score + 100*missing，
+**所有 backup 骑手得分全部计入**。而 solver 架构（multi-courier backup/race topology）与
+我们的训练门禁全部优化概率接受口径 penalty_score（first-accept 期望）。
+
+anchor 实测对比：朴素官方贪心 399.90 ｜ champion 单骑手 604.76 ｜ champion 多骑手 1160.27
+（概率口径则相反：贪心 2924 ｜ champion 626.32）。两口径近似对偶，backup 在官方口径纯亏。
+
+已落地的对冲工件：
+- evaluator 双口径（objective_score 字段，state/case 报告双列）；
+- submission/solver_official_greedy.py：官方贪心备选提交物（全场景 valid+全覆盖，毫秒级，
+  anchor 399.90 / large 393.93 / scarce 436.92）；
+- memory/dual_metric_report.json：champion 全场景双口径数值。
+
+**待用户决策**：比赛真实评判是否模拟骑手接单（willingness 概率接受）？
+  A) 概率接受 → 维持 champion 提交（现 submission/solver.py）；
+  B) 官方简单口径 → 换用 solver_official_greedy.py（或在其上加局部搜索）。
+判据线索：输入含 willingness 字段（简单口径下无用）；但 README 明确写了 objective 公式。
+
+## 2026-09-21 · 决策落定：以 A（概率接受）为标准，参考 B（官方贪心）的方法
+
+用户确认 A 为评判标准。B 的方法以三种方式落地：
+
+1. **B-种子实验**（确定性）：将 choose_solution 种子池限制为 score/per_task（B 等价排序）后，
+   A 口径下 anchor/large/high_noise/scarce 完全同分、medium +1.35 劣——改进管线
+   （local_search 扰动重启 + 拓扑修复）对种子不敏感，B-种子在 A 标准下被支配。
+   结论：种子层无需改动，A 标准下 champion 架构已最优取向。
+2. **B-贪心安全网**：solve() 管线整体包裹 try/except，任何异常降级为官方贪心
+   （score/task 升序 + 冲突跳过），不再崩溃。注入 RuntimeError 探针验证：兜底输出
+   valid 30/30 全覆盖；正常路径 anchor 626.32 分毫不动。71.44KB 合规。
+   （首次拼接被 compile 门拦下缩进错误——函数级 splice_function 重做；属性名
+   task_str 非 task_id_list 的笔误由探针暴露后修复。）
+3. **双口径报告与备选工件保留**：objective_score 字段、solver_official_greedy.py、
+   dual_metric_report.json 均保留，若赛制澄清为 B 可 10 分钟切换。

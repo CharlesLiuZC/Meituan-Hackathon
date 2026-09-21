@@ -1438,26 +1438,46 @@ def solve(input_text: str) -> list:
         return []
     configure_runtime(candidates, task_to_idx, courier_to_idx)
     saved_overrides = apply_runtime_overrides()
+    task_mask_all = 0
+    for c in candidates:
+        task_mask_all |= c.task_mask
     try:
-        deadline_ms = _now_ms() + CONFIG['time_budget_ms'] - CONFIG['safety_margin_ms']
-        primary_deadline_ms = deadline_ms
-        primary_budget_ms = float(CONFIG.get('multi_primary_time_budget_ms', 0.0))
-        if primary_budget_ms > 0.0:
-            primary_deadline_ms = min(deadline_ms, _now_ms() + primary_budget_ms)
-        selected = choose_solution(candidates, task_to_idx, courier_to_idx, primary_deadline_ms)
-        if not CONFIG.get('enable_multi_courier_output', False):
-            return format_solution(selected)
-        if CONFIG.get('_runtime_low_willingness', False):
-            selected, backup_map = improve_low_with_multi_options(candidates, task_to_idx, courier_to_idx, selected, deadline_ms)
-            selected, backup_map = improve_backup_allocation(candidates, selected, backup_map, deadline_ms)
-            selected, backup_map = race_topology_repair(candidates, task_to_idx, courier_to_idx, selected, backup_map, deadline_ms)
+        try:
+            deadline_ms = _now_ms() + CONFIG['time_budget_ms'] - CONFIG['safety_margin_ms']
+            primary_deadline_ms = deadline_ms
+            primary_budget_ms = float(CONFIG.get('multi_primary_time_budget_ms', 0.0))
+            if primary_budget_ms > 0.0:
+                primary_deadline_ms = min(deadline_ms, _now_ms() + primary_budget_ms)
+            selected = choose_solution(candidates, task_to_idx, courier_to_idx, primary_deadline_ms)
+            if not CONFIG.get('enable_multi_courier_output', False):
+                return format_solution(selected)
+            if CONFIG.get('_runtime_low_willingness', False):
+                selected, backup_map = improve_low_with_multi_options(candidates, task_to_idx, courier_to_idx, selected, deadline_ms)
+                selected, backup_map = improve_backup_allocation(candidates, selected, backup_map, deadline_ms)
+                selected, backup_map = race_topology_repair(candidates, task_to_idx, courier_to_idx, selected, backup_map, deadline_ms)
+                selected, backup_map = prefer_official_baseline_when_better(candidates, task_to_idx, selected, backup_map)
+                return format_solution(selected, backup_map)
+            if CONFIG.get('_runtime_case_type', 'normal') == 'normal':
+                selected, backup_map = improve_regular_with_multi_options(candidates, task_to_idx, courier_to_idx, selected, deadline_ms)
+                return format_solution(selected, backup_map)
+            selected, backup_map = improve_scarce_with_multi_options(candidates, task_to_idx, courier_to_idx, selected, deadline_ms)
             selected, backup_map = prefer_official_baseline_when_better(candidates, task_to_idx, selected, backup_map)
             return format_solution(selected, backup_map)
-        if CONFIG.get('_runtime_case_type', 'normal') == 'normal':
-            selected, backup_map = improve_regular_with_multi_options(candidates, task_to_idx, courier_to_idx, selected, deadline_ms)
-            return format_solution(selected, backup_map)
-        selected, backup_map = improve_scarce_with_multi_options(candidates, task_to_idx, courier_to_idx, selected, deadline_ms)
-        selected, backup_map = prefer_official_baseline_when_better(candidates, task_to_idx, selected, backup_map)
-        return format_solution(selected, backup_map)
+        except Exception:
+            # safety net (B-method fallback): any pipeline failure degrades to
+            # the official greedy instead of crashing the submission.
+            ordered = sorted(candidates, key=lambda c: (c.score / max(1, c.task_count), c.score))
+            used_tasks = 0
+            used_couriers = 0
+            picked = []
+            for c in ordered:
+                if used_tasks & c.task_mask or used_couriers & c.courier_bit:
+                    continue
+                picked.append(c)
+                used_tasks |= c.task_mask
+                used_couriers |= c.courier_bit
+                if used_tasks == task_mask_all:
+                    break
+            return [(c.task_str, [c.courier_id]) for c in picked]
     finally:
         restore_runtime_overrides(saved_overrides)
