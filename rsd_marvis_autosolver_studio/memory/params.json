@@ -1,0 +1,61 @@
+{
+  "global": {
+    "rounds": 6,
+    "mode": "safe-medium-only",
+    "auto_backup": true,
+    "write_notes": true,
+    "no_regression": true,
+    "target_solver_kb": 70,
+    "hard_limit_kb": 100,
+    "regression_tolerance": 0.8,
+    "anchor_tradeoff_ratio": 0.25,
+    "anchor_tradeoff_cap": 1.2,
+    "l4_enabled": true,
+    "l4_every": 4,
+    "l4_tournament_n": 3,
+    "l4_target": "improve_backup_allocation",
+    "l4_scenes": [
+      "low_willingness"
+    ]
+  },
+  "scenes": {
+    "high_noise": {
+      "enabled": true,
+      "noise_sigma": 0.22,
+      "regret_weight": 0.72,
+      "pair_swap_budget_ms": 950,
+      "seed_count": 40
+    },
+    "medium": {
+      "enabled": true,
+      "top_k": 8,
+      "remove_count": 2,
+      "lns_budget_ms": 1200,
+      "seed_count": 60
+    },
+    "large": {
+      "enabled": false,
+      "candidate_cap": 14,
+      "polish_ms": 900,
+      "seed_count": 30
+    },
+    "low_willingness": {
+      "enabled": true,
+      "backup_budget_ms": 1800,
+      "max_extra": 3,
+      "min_backup_gain": 0.4,
+      "seed_count": 40
+    },
+    "scarce_couriers": {
+      "enabled": false,
+      "bundle_first_weight": 0.85,
+      "risky_lns": false,
+      "seed_count": 20
+    },
+    "small_tiny": {
+      "enabled": false,
+      "exact_search": false,
+      "seed_count": 10
+    }
+  }
+}

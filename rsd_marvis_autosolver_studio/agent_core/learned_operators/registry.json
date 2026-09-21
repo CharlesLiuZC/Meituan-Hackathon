@@ -1,0 +1,67 @@
+{
+ "operators": [
+  {
+   "name": "large_scene_targeted_local_search",
+   "file": "op_large_scene_targeted_local_search.py",
+   "scene": "large",
+   "born_round": 3,
+   "created_at": "2026-09-19 14:07:55"
+  },
+  {
+   "name": "scarce_couriers_expand_candidates_tighte",
+   "file": "op_scarce_couriers_expand_candidates_tighte.py",
+   "scene": "scarce_couriers",
+   "born_round": 6,
+   "created_at": "2026-09-19 16:17:55"
+  },
+  {
+   "name": "large_scene_worst_metric_rebalance",
+   "file": "op_large_scene_worst_metric_rebalance.py",
+   "scene": "large",
+   "born_round": 9,
+   "created_at": "2026-09-19 16:22:42"
+  },
+  {
+   "name": "large_scene_worst_metric_boost",
+   "file": "op_large_scene_worst_metric_boost.py",
+   "scene": "large",
+   "born_round": 3,
+   "created_at": "2026-09-19 23:35:13"
+  },
+  {
+   "name": "large_scene_worst_metric_boost_v2",
+   "file": "op_large_scene_worst_metric_boost_v2.py",
+   "scene": "large",
+   "born_round": 3,
+   "created_at": "2026-09-19 23:54:03"
+  },
+  {
+   "name": "large_scene_worst_metric_boost_v3",
+   "file": "op_large_scene_worst_metric_boost_v3.py",
+   "scene": "large",
+   "born_round": 3,
+   "created_at": "2026-09-20 00:46:28"
+  },
+  {
+   "name": "large_scene_worst_metric_boost_v4",
+   "file": "op_large_scene_worst_metric_boost_v4.py",
+   "scene": "large",
+   "born_round": 3,
+   "created_at": "2026-09-20 21:33:19"
+  },
+  {
+   "name": "large_scene_worst_metric_boost_v5",
+   "file": "op_large_scene_worst_metric_boost_v5.py",
+   "scene": "large",
+   "born_round": 3,
+   "created_at": "2026-09-20 23:27:29"
+  },
+  {
+   "name": "low_willingness_worst_metric_boost",
+   "file": "op_low_willingness_worst_metric_boost.py",
+   "scene": "low_willingness",
+   "born_round": 9,
+   "created_at": "2026-09-21 17:45:34"
+  }
+ ]
+}

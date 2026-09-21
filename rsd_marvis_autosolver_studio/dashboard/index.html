@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RSD-Marvis AutoSolver Studio V5 HARD FIX</title>
+<link rel="stylesheet" href="/dashboard/style.css?v=5-hardfix"/>
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="mark">R</div><div><div class="brand-title">RSD<span>Marvis</span></div><div class="sub">Studio V5 HARD FIX</div></div></div>
+    <div class="project"><div class="tiny">当前项目</div><b>Meituan AutoSolver</b><span>Champion Guard ON</span></div>
+    <nav>
+      <button class="nav active" data-tab="cockpit">总览 Cockpit</button>
+      <button class="nav train-nav" data-tab="oneclick">🚀 一键训练</button>
+      <button class="nav" data-tab="office">Agent 办公室</button>
+      <button class="nav" data-tab="flow">状态机 Flow</button>
+      <button class="nav" data-tab="data">实验数据 DataLab</button>
+      <button class="nav" data-tab="score">分数对比 Score</button>
+      <button class="nav" data-tab="forensics">错误归因</button>
+      <button class="nav" data-tab="logs">训练日志</button>
+      <button class="nav" data-tab="auditor">代码巡查</button>
+      <button class="nav" data-tab="rollback">一键回滚</button>
+      <button class="nav" data-tab="chat">LLM 对话</button>
+      <button class="nav" data-tab="control">用户配置台</button>
+    </nav>
+    <div class="mini" id="miniLog"></div>
+  </aside>
+  <main>
+    <header>
+      <button class="top-train" id="quickTrain">🚀 启动一键训练</button>
+      <div class="mode">DeepSeek-v4-pro</div>
+      <div class="header-title">V5 hardfix · visible one-click training · interactive audit</div>
+      <div class="header-metrics"><span>solver <b id="topSize">--KB</b></span><span>champion <b id="topChampion">--</b></span></div>
+      <button class="top-stop" id="topStop">中止训练</button>
+    </header>
+
+    <section id="tab-cockpit" class="tab active">
+      <div class="hero"><div><h1>V5 Cockpit：已强制加入可视化与一键训练入口</h1><p>柱状图、折线图、雷达图、热力图、场景地图全部默认显示。</p></div><div class="hero-state" id="heroState">READY</div></div>
+      <div class="grid four">
+        <div class="card glow"><small>Champion</small><b id="championScore">--</b><p>只接受更低 candidate</p></div>
+        <div class="card"><small>Candidate</small><b id="candidateScore">idle</b><p>等待训练</p></div>
+        <div class="card"><small>No Regression</small><b class="ok">ON</b><p>small / tiny / scarce</p></div>
+        <div class="card"><small>Solver</small><b id="solverCardSize">--KB</b><p>目标 50~70KB</p></div>
+      </div>
+      <div class="grid two"><div class="panel"><h2>Case 分数柱状图</h2><div id="barChart" class="chart"></div></div><div class="panel"><h2>训练趋势折线图</h2><svg id="lineChart" class="chart-svg"></svg></div></div>
+      <div class="grid three"><div class="panel"><h2>策略能力雷达图</h2><svg id="radarChart" class="chart-svg small"></svg></div><div class="panel"><h2>场景-策略热力图</h2><div id="heatmap" class="heatmap"></div></div><div class="panel"><h2>场景地图</h2><div id="sceneMap" class="scene-map"></div></div></div>
+      <div class="panel full"><h2>实时 Agent 状态流</h2><div id="events" class="events"></div></div>
+    </section>
+
+    <section id="tab-oneclick" class="tab">
+      <div class="panel full hero-lite"><h2>🚀 一键训练配置</h2><p>点击即自动备份上一轮 → 训练 → 评估 → 审计 → 错误归因 → 写入 Notes/Handover。</p>
+        <div class="config-grid"><label>训练轮数<input id="roundInput" type="number" min="1" max="50" value="6"/></label><label>训练模式<select id="modeInput"><option value="safe-medium-only">safe-medium-only</option><option value="balanced">balanced</option><option value="high-noise-lab">high-noise-lab</option><option value="low-backup-lab">low-backup-lab</option></select></label><label><input id="autoBackupInput" type="checkbox" checked/> 训练前自动备份</label><label><input id="notesInput" type="checkbox" checked/> 写 Notes/Handover</label></div>
+        <div class="train-controls"><button class="primary bigbtn" id="startTrain">启动一键训练</button><button class="danger bigbtn" id="stopTrain">中止训练</button><button class="secondary bigbtn" id="seedConfig">根据 large_seed301 自动生成种子配置</button><button class="secondary bigbtn" id="distillNow">立即蒸馏 Teacher</button></div>
+        <div class="progress"><div id="progressBar"></div></div><div class="train-status" id="trainStatus">idle</div>
+      </div>
+      <div class="panel full"><h2>每轮训练 Timeline</h2><div id="timeline" class="timeline"></div></div>
+      <div class="panel full"><h2>RSI 三层自迭代状态（L1 solver 改进 · L2 算子策略学习 · L3 自写算子）</h2><div id="rsiPanel" class="rsi-panel"></div></div>
+    </section>
+
+    <section id="tab-office" class="tab"><div class="office-layout"><div class="office-wrap"><div class="office-title">Agent Office · 点击任意 Agent 展开详情</div><div id="office" class="office"></div></div><aside class="detail-panel"><h2 id="agentDetailTitle">Agent Detail</h2><div id="agentDetail">点击 Agent 查看本轮操作与数据。</div></aside></div></section>
+    <section id="tab-flow" class="tab"><div class="flow-layout"><div class="panel"><h2>LangGraph Flow · 节点可点击审查</h2><div id="flowNodes" class="flow"></div></div><aside class="detail-panel"><h2 id="flowDetailTitle">Flow Node</h2><pre id="flowDetail" class="code">点击节点查看代码与状态。</pre></aside></div></section>
+    <section id="tab-data" class="tab"><div class="grid two"><div class="panel"><h2>large_seed301 数据画像</h2><div id="dataProfile"></div></div><div class="panel"><h2>场景参数调试</h2><div id="paramEditor"></div><button class="primary" id="saveParams">保存参数</button></div></div><div class="panel full"><h2>场景策略说明</h2><div id="sceneExplain" class="scene-explain"></div></div></section>
+    <section id="tab-score" class="tab"><div class="panel full"><h2>Case 分数与差值</h2><div id="scoreTable"></div></div></section>
+    <section id="tab-forensics" class="tab"><div class="panel full"><h2>错误原因 + 错误代码 + 修复代码</h2><div id="forensics"></div></div></section>
+    <section id="tab-logs" class="tab"><div class="logs-layout"><div class="panel"><h2>Notes.md</h2><pre id="notesMd" class="code logbox"></pre></div><div class="panel"><h2>Handover.md</h2><pre id="handoverMd" class="code logbox"></pre></div><div class="panel full"><h2>Agent 自主迭代日志</h2><pre id="agentLog" class="code logbox"></pre></div><div class="panel full"><h2>LLM / 改动 / 数据反馈 / 备份日志</h2><pre id="otherLogs" class="code logbox"></pre></div></div></section>
+    <section id="tab-auditor" class="tab"><div class="grid two"><div class="panel"><h2>solver.py 审计</h2><div id="auditBox"></div><button class="primary" id="auditBtn">重新审计</button></div><div class="panel"><h2>代码巡查</h2><pre class="code" id="solverPreview">loading...</pre></div></div></section>
+    <section id="tab-rollback" class="tab"><div class="panel full"><h2>一键回滚与备份版本</h2><p>点击备份卡片，输入 ROLLBACK 二次确认。</p><div class="backup-actions"><button class="primary" id="makeBackup">创建备份</button><button class="secondary" id="refreshBackups">刷新备份列表</button></div><div id="backupList" class="backup-list"></div></div></section>
+    <section id="tab-chat" class="tab"><div class="grid two"><div class="panel"><h2>LLM Reflector</h2><div id="chatLog" class="chatlog"></div><textarea id="chatInput" placeholder="请读取本轮 Notes / Timeline，分析错误原因并给出下一轮 DSL。"></textarea><button class="primary" id="sendChat">发送给 DeepSeek</button></div><div class="panel"><h2>规则</h2><ul><li>LLM 只做归因和 DSL</li><li>不直接写 solver.py</li><li>不保存 API key</li><li>candidate 必须通过 Auditor</li></ul></div></div></section>
+    <section id="tab-control" class="tab"><div class="grid three"><button class="control" data-action="backup"><b>创建备份</b><span>显示时间、哈希、文件名</span></button><button class="control" data-action="audit"><b>审计 solver</b><span>大小 / 危险依赖 / 函数数</span></button><button class="control" data-action="distill"><b>蒸馏 Teacher</b><span>生成 compact config</span></button><button class="control" data-action="seed_config"><b>自动种子配置</b><span>基于 large_seed301</span></button><button class="control" data-action="freeze_scene" data-scene="small"><b>冻结 small</b><span>禁止 exact</span></button><button class="control" data-action="freeze_scene" data-scene="scarce"><b>冻结 scarce</b><span>禁止 risky LNS</span></button></div></section>
+  </main>
+</div>
+<div id="modal" class="modal hidden"><div class="modal-card"><button id="modalClose">×</button><h2 id="modalTitle"></h2><div id="modalBody"></div></div></div>
+<script src="/dashboard/app.js?v=5-hardfix"></script>
+</body>
+</html>

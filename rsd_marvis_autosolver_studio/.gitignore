@@ -1,0 +1,15 @@
+# generated / regenerable at runtime
+backups/
+logs/
+variants/
+data/case_bank/
+data/midtrain_cases/
+agent_core/__pycache__/
+agent_core/learned_operators/__pycache__/
+__pycache__/
+*.pyc
+memory/experience.sqlite
+memory/experience.sqlite-*
+memory/l4_archive/_job_*.json
+memory/distillation_report.json
+.env

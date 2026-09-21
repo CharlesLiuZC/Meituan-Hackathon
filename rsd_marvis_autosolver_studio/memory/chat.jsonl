@@ -1,0 +1,2 @@
+{"time": "13:17:13", "role": "user", "message": "hello"}
+{"time": "13:17:14", "role": "assistant", "message": "DeepSeek API key 未设置。请设置本地环境变量 DEEPSEEK_API_KEY；不要写入代码或 zip。", "ok": false}

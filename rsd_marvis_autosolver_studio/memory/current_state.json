@@ -1,0 +1,2352 @@
+{
+  "version": "5.0-hardfix",
+  "ui_revision": "20260606-hardfix-visible-oneclick",
+  "status": "idle",
+  "champion": {
+    "score": 716.74,
+    "solver_size_kb": 68.92,
+    "solver_path": "submission/solver.py",
+    "status": "locked",
+    "measured": {
+      "anchor:large_seed301": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 626.319027,
+        "covered_tasks": 40,
+        "total_tasks": 40,
+        "elapsed_ms": 8911.5,
+        "case_type": "normal"
+      },
+      "holdout:high_noise": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 299.69055,
+        "covered_tasks": 30,
+        "total_tasks": 30,
+        "elapsed_ms": 8832.0,
+        "case_type": "normal"
+      },
+      "holdout:large": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 616.888648,
+        "covered_tasks": 40,
+        "total_tasks": 40,
+        "elapsed_ms": 5926.6,
+        "case_type": "normal"
+      },
+      "protected:tiny": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 67.940322,
+        "covered_tasks": 6,
+        "total_tasks": 6,
+        "elapsed_ms": 988.5,
+        "case_type": "normal"
+      },
+      "protected:small": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 180.285041,
+        "covered_tasks": 15,
+        "total_tasks": 15,
+        "elapsed_ms": 4853.1,
+        "case_type": "normal"
+      },
+      "holdout:medium": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 403.074417,
+        "covered_tasks": 30,
+        "total_tasks": 30,
+        "elapsed_ms": 6590.1,
+        "case_type": "normal"
+      },
+      "holdout:low_willingness": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 1697.709206,
+        "covered_tasks": 40,
+        "total_tasks": 40,
+        "elapsed_ms": 8871.6,
+        "case_type": "low_willingness"
+      },
+      "holdout:scarce_couriers": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 1224.65855,
+        "covered_tasks": 40,
+        "total_tasks": 40,
+        "elapsed_ms": 1991.1,
+        "case_type": "scarce_couriers"
+      },
+      "protected:scarce_couriers": {
+        "ok": true,
+        "valid": true,
+        "penalty_score": 1185.712336,
+        "covered_tasks": 40,
+        "total_tasks": 40,
+        "elapsed_ms": 2071.5,
+        "case_type": "scarce_couriers"
+      }
+    }
+  },
+  "candidate": {
+    "score": null,
+    "status": "idle"
+  },
+  "large_seed301_profile": {
+    "rows": 33780,
+    "tasks": 40,
+    "couriers": 80,
+    "density": 10.5563,
+    "pair_ratio": 0.9053,
+    "avg_score": 56.3942,
+    "score_std": 19.1907,
+    "avg_willingness": 0.3,
+    "willingness_std": 0.2156,
+    "courier_ratio": 2.0,
+    "scene_guess": "large"
+  },
+  "protected_cases": {
+    "scarce_couriers_seed401": {
+      "threshold": 1558,
+      "last": 1554.38,
+      "locked": true
+    },
+    "small_seed100": {
+      "threshold": 309,
+      "last": 306.91,
+      "locked": true
+    },
+    "tiny_seed42": {
+      "threshold": 160,
+      "last": 158.65,
+      "locked": true
+    }
+  },
+  "case_results": [
+    {
+      "case": "high_noise_seed601",
+      "champion": 497.06,
+      "candidate": null,
+      "delta": null,
+      "assigned": "30/30",
+      "status": "target"
+    },
+    {
+      "case": "large_seed301",
+      "champion": 675.35,
+      "candidate": null,
+      "delta": null,
+      "assigned": "40/40",
+      "status": "anchor",
+      "measured": {
+        "penalty": 626.319027,
+        "covered": "40/40"
+      }
+    },
+    {
+      "case": "large_seed302",
+      "champion": 639.68,
+      "candidate": null,
+      "delta": null,
+      "assigned": "40/40",
+      "status": "watch"
+    },
+    {
+      "case": "low_willingness_seed501",
+      "champion": 1810.77,
+      "candidate": null,
+      "delta": null,
+      "assigned": "30/30",
+      "status": "target"
+    },
+    {
+      "case": "medium_seed201",
+      "champion": 494.86,
+      "candidate": null,
+      "delta": null,
+      "assigned": "30/30",
+      "status": "target"
+    },
+    {
+      "case": "medium_seed202",
+      "champion": 527.59,
+      "candidate": null,
+      "delta": null,
+      "assigned": "30/30",
+      "status": "target"
+    },
+    {
+      "case": "medium_seed203",
+      "champion": 508.65,
+      "candidate": null,
+      "delta": null,
+      "assigned": "30/30",
+      "status": "target"
+    },
+    {
+      "case": "scarce_couriers_seed401",
+      "champion": 1554.38,
+      "candidate": null,
+      "delta": null,
+      "assigned": "40/40",
+      "status": "protected"
+    },
+    {
+      "case": "small_seed100",
+      "champion": 306.91,
+      "candidate": null,
+      "delta": null,
+      "assigned": "15/15",
+      "status": "protected"
+    },
+    {
+      "case": "tiny_seed42",
+      "champion": 158.65,
+      "candidate": null,
+      "delta": null,
+      "assigned": "6/6",
+      "status": "protected"
+    }
+  ],
+  "agents": [
+    {
+      "id": "leader",
+      "name": "Leader Agent",
+      "role": "一键训练总控",
+      "status": "ready",
+      "energy": 96,
+      "x": 50,
+      "y": 16,
+      "color": "#ff3d57",
+      "ops": [
+        "读取一键训练配置",
+        "创建 pre-training backup",
+        "调度所有 Agent",
+        "决定 rollback/promote"
+      ],
+      "data": {
+        "decision": "waiting"
+      },
+      "decision": "promoted"
+    },
+    {
+      "id": "data",
+      "name": "Data Seed Agent",
+      "role": "数据种子生成",
+      "status": "mounted",
+      "energy": 88,
+      "x": 20,
+      "y": 32,
+      "color": "#2be88a",
+      "ops": [
+        "解析 large_seed301",
+        "生成场景随机种子",
+        "清洗 TSV"
+      ],
+      "data": {
+        "rows": 33780,
+        "tasks": 40,
+        "couriers": 80,
+        "density": 10.5563,
+        "pair_ratio": 0.9053,
+        "avg_score": 56.3942,
+        "score_std": 19.1907,
+        "avg_willingness": 0.3,
+        "willingness_std": 0.2156,
+        "courier_ratio": 2.0,
+        "scene_guess": "large"
+      }
+    },
+    {
+      "id": "strategy",
+      "name": "Strategy Agent",
+      "role": "策略分析",
+      "status": "routing low_willingness",
+      "energy": 86,
+      "x": 44,
+      "y": 42,
+      "color": "#a479ff",
+      "ops": [
+        "场景路由",
+        "策略池筛选",
+        "生成 DSL"
+      ],
+      "data": {
+        "active": "medium remove2"
+      }
+    },
+    {
+      "id": "trainer",
+      "name": "Trainer Agent",
+      "role": "训练执行",
+      "status": "round 9",
+      "energy": 74,
+      "x": 70,
+      "y": 32,
+      "color": "#45a3ff",
+      "ops": [
+        "执行 round",
+        "写 trials",
+        "支持中止"
+      ],
+      "data": {
+        "round": 0
+      }
+    },
+    {
+      "id": "hyper",
+      "name": "HyperParam Agent",
+      "role": "超参调优",
+      "status": "ready",
+      "energy": 80,
+      "x": 25,
+      "y": 62,
+      "color": "#ff9d42",
+      "ops": [
+        "编辑 params.json",
+        "调 high_noise/medium/low 参数"
+      ],
+      "data": {
+        "high_noise": {
+          "enabled": true,
+          "noise_sigma": 0.22,
+          "regret_weight": 0.72,
+          "pair_swap_budget_ms": 950,
+          "seed_count": 40
+        },
+        "medium": {
+          "enabled": true,
+          "top_k": 8,
+          "remove_count": 2,
+          "lns_budget_ms": 1200,
+          "seed_count": 60
+        },
+        "large": {
+          "enabled": false,
+          "candidate_cap": 14,
+          "polish_ms": 900,
+          "seed_count": 30
+        },
+        "low_willingness": {
+          "enabled": true,
+          "backup_budget_ms": 1800,
+          "max_extra": 3,
+          "min_backup_gain": 0.4,
+          "seed_count": 40
+        },
+        "scarce_couriers": {
+          "enabled": false,
+          "bundle_first_weight": 0.85,
+          "risky_lns": false,
+          "seed_count": 20
+        },
+        "small_tiny": {
+          "enabled": false,
+          "exact_search": false,
+          "seed_count": 10
+        }
+      }
+    },
+    {
+      "id": "eval",
+      "name": "Evaluator Agent",
+      "role": "评估与反馈",
+      "status": "ready",
+      "energy": 92,
+      "x": 47,
+      "y": 72,
+      "color": "#2ee9ff",
+      "ops": [
+        "官方 anchor 评估",
+        "分数差异可视化",
+        "no-regression 检查"
+      ],
+      "data": {
+        "anchor": "large_seed301"
+      }
+    },
+    {
+      "id": "reflector",
+      "name": "LLM Reflector",
+      "role": "DeepSeek 错误归因",
+      "status": "L4 rewriting improve_backup_allocation x1",
+      "energy": 68,
+      "x": 72,
+      "y": 63,
+      "color": "#ff6bd6",
+      "ops": [
+        "读取日志",
+        "归因错误",
+        "写 Notes/Handover"
+      ],
+      "data": {
+        "model": "deepseek-v4-pro"
+      }
+    },
+    {
+      "id": "auditor",
+      "name": "Auditor Agent",
+      "role": "代码审计",
+      "status": "armed",
+      "energy": 98,
+      "x": 86,
+      "y": 17,
+      "color": "#d9e4ff",
+      "ops": [
+        "检查大小",
+        "检测危险依赖",
+        "记录哈希",
+        "否决风险"
+      ],
+      "data": {
+        "size_kb": 68.92,
+        "functions": 45
+      }
+    },
+    {
+      "id": "distiller",
+      "name": "Distiller Agent",
+      "role": "Teacher 蒸馏",
+      "status": "loaded",
+      "energy": 88,
+      "x": 13,
+      "y": 78,
+      "color": "#35e0bd",
+      "ops": [
+        "解析 CONFIG",
+        "生成 compact config",
+        "裁剪失败分支"
+      ],
+      "data": {
+        "teacher_size_kb": 68.92
+      }
+    },
+    {
+      "id": "submit",
+      "name": "Submit Agent",
+      "role": "半自动提交",
+      "status": "locked",
+      "energy": 62,
+      "x": 86,
+      "y": 78,
+      "color": "#ffe15a",
+      "ops": [
+        "打包 solver",
+        "等待用户确认",
+        "记录提交哈希"
+      ],
+      "data": {
+        "mode": "manual-confirm"
+      }
+    }
+  ],
+  "flow_nodes": [
+    {
+      "id": "Start",
+      "status": "ready",
+      "code": "start_one_click_training(params)",
+      "detail": "用户点击启动，一键训练开始。"
+    },
+    {
+      "id": "AutoBackup",
+      "status": "guard",
+      "code": "make_backup(tag='pretrain_rN')",
+      "detail": "训练前自动备份 solver/memory/logs。"
+    },
+    {
+      "id": "LoadOfficialAssets",
+      "status": "ready",
+      "code": "parse_case('data/official/large_seed301.txt')",
+      "detail": "读取官方样本并生成 profile。"
+    },
+    {
+      "id": "SceneRoute",
+      "status": "ready",
+      "code": "route_scene(features, params)",
+      "detail": "按 high_noise/medium/low/large/scarce 分流。"
+    },
+    {
+      "id": "StrategyDispatch",
+      "status": "ready",
+      "code": "dispatch_strategy(scene, params)",
+      "detail": "策略池选择并通过 Harness 过滤。"
+    },
+    {
+      "id": "Evaluate",
+      "status": "ready",
+      "code": "evaluate(candidate, official_anchor)",
+      "detail": "评估 candidate 与 official anchor。"
+    },
+    {
+      "id": "Forensics",
+      "status": "ready",
+      "code": "write_forensics(wrong_code, fixed_code)",
+      "detail": "错误归因写 Notes/Handover/code_changes。"
+    },
+    {
+      "id": "NoRegression",
+      "status": "armed",
+      "code": "assert small<=309 and tiny<=160 and scarce<=1558",
+      "detail": "保护场景硬门禁。"
+    },
+    {
+      "id": "Rollback",
+      "status": "ready",
+      "code": "restore_backup(name) after confirm='ROLLBACK'",
+      "detail": "二次确认后回滚。"
+    }
+  ],
+  "training": {
+    "running": true,
+    "round": 9,
+    "total_rounds": 9,
+    "mode": "code-lab",
+    "timeline": [
+      {
+        "round": 1,
+        "scene": "medium",
+        "agent": "Strategy",
+        "message": "scene routed: medium",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 1,
+        "scene": "medium",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 674.28 (2000ms) / fine 403.19 (6000ms)",
+        "metrics": {
+          "coarse": 674.281,
+          "fine": 403.191,
+          "budget_ms": 6000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 1,
+        "scene": "medium",
+        "agent": "Evaluator",
+        "message": "fine re-check: 2 leaders @ 6000ms, baseline 403.19",
+        "metrics": {
+          "avg_penalty": 403.191,
+          "budget_ms": 6000.0
+        }
+      },
+      {
+        "round": 1,
+        "scene": "medium",
+        "agent": "Trainer",
+        "message": "candidate rejected: 筛选无改进：best=401.92 vs baseline=403.19",
+        "metrics": {
+          "decision": "reject"
+        }
+      },
+      {
+        "round": 2,
+        "scene": "high_noise",
+        "agent": "Strategy",
+        "message": "scene routed: high_noise",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 2,
+        "scene": "high_noise",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 367.31 (2000ms) / fine 314.58 (6000ms)",
+        "metrics": {
+          "coarse": 367.312,
+          "fine": 314.576,
+          "budget_ms": 6000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 2,
+        "scene": "high_noise",
+        "agent": "Evaluator",
+        "message": "fine re-check: 2 leaders @ 6000ms, baseline 314.58",
+        "metrics": {
+          "avg_penalty": 314.576,
+          "budget_ms": 6000.0
+        }
+      },
+      {
+        "round": 2,
+        "scene": "high_noise",
+        "agent": "Trainer",
+        "message": "candidate rejected: 筛选无改进：best=313.50 vs baseline=314.58",
+        "metrics": {
+          "decision": "reject"
+        }
+      },
+      {
+        "round": 3,
+        "scene": "large",
+        "agent": "Strategy",
+        "message": "scene routed: large",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 3,
+        "scene": "large",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 931.71 (2000ms) / fine 622.03 (6000ms)",
+        "metrics": {
+          "coarse": 931.707,
+          "fine": 622.026,
+          "budget_ms": 6000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 3,
+        "scene": "large",
+        "agent": "Evaluator",
+        "message": "fine re-check: 2 leaders @ 6000ms, baseline 622.03",
+        "metrics": {
+          "avg_penalty": 622.026,
+          "budget_ms": 6000.0
+        }
+      },
+      {
+        "round": 3,
+        "scene": "large",
+        "agent": "Trainer",
+        "message": "candidate rejected: 筛选无改进：best=622.03 vs baseline=622.03",
+        "metrics": {
+          "decision": "reject"
+        }
+      },
+      {
+        "round": 4,
+        "scene": "low_willingness",
+        "agent": "Strategy",
+        "message": "scene routed: low_willingness",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 4,
+        "scene": "low_willingness",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 2777.67 (2000ms) / fine 1681.87 (8000ms)",
+        "metrics": {
+          "coarse": 2777.672,
+          "fine": 1681.872,
+          "budget_ms": 8000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 4,
+        "scene": "low_willingness",
+        "agent": "Code Evolution",
+        "message": "L4 improve_backup_allocation#1 [free] screened: 1682.99 vs 1681.87",
+        "metrics": {
+          "gain_pct": -0.07
+        }
+      },
+      {
+        "round": 4,
+        "scene": "low_willingness",
+        "agent": "Evaluator",
+        "message": "fine re-check: 2 leaders @ 8000ms, baseline 1681.87",
+        "metrics": {
+          "avg_penalty": 1681.872,
+          "budget_ms": 8000.0
+        }
+      },
+      {
+        "round": 4,
+        "scene": "low_willingness",
+        "agent": "Trainer",
+        "message": "candidate rejected: 筛选无改进：best=1681.87 vs baseline=1681.87",
+        "metrics": {
+          "decision": "reject"
+        }
+      },
+      {
+        "round": 5,
+        "scene": "scarce_couriers",
+        "agent": "Strategy",
+        "message": "scene routed: scarce_couriers",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 5,
+        "scene": "scarce_couriers",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 1225.29 (2000ms) / fine 1225.29 (6000ms)",
+        "metrics": {
+          "coarse": 1225.289,
+          "fine": 1225.289,
+          "budget_ms": 6000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 5,
+        "scene": "scarce_couriers",
+        "agent": "Evaluator",
+        "message": "fine re-check: 2 leaders @ 6000ms, baseline 1225.29",
+        "metrics": {
+          "avg_penalty": 1225.289,
+          "budget_ms": 6000.0
+        }
+      },
+      {
+        "round": 5,
+        "scene": "scarce_couriers",
+        "agent": "Trainer",
+        "message": "candidate rejected: 筛选无改进：best=1219.44 vs baseline=1225.29",
+        "metrics": {
+          "decision": "reject"
+        }
+      },
+      {
+        "round": 6,
+        "scene": "medium",
+        "agent": "Strategy",
+        "message": "scene routed: medium",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 6,
+        "scene": "medium",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 674.28 (2000ms) / fine 401.92 (6000ms)",
+        "metrics": {
+          "coarse": 674.281,
+          "fine": 401.921,
+          "budget_ms": 6000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 6,
+        "scene": "medium",
+        "agent": "Evaluator",
+        "message": "fine re-check: 2 leaders @ 6000ms, baseline 401.92",
+        "metrics": {
+          "avg_penalty": 401.921,
+          "budget_ms": 6000.0
+        }
+      },
+      {
+        "round": 6,
+        "scene": "medium",
+        "agent": "Trainer",
+        "message": "candidate rejected: 筛选无改进：best=402.50 vs baseline=401.92",
+        "metrics": {
+          "decision": "reject"
+        }
+      },
+      {
+        "round": 7,
+        "scene": "high_noise",
+        "agent": "Strategy",
+        "message": "scene routed: high_noise",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 7,
+        "scene": "high_noise",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 367.31 (2000ms) / fine 313.50 (6000ms)",
+        "metrics": {
+          "coarse": 367.312,
+          "fine": 313.503,
+          "budget_ms": 6000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 7,
+        "scene": "high_noise",
+        "agent": "Evaluator",
+        "message": "fine re-check: 2 leaders @ 6000ms, baseline 313.50",
+        "metrics": {
+          "avg_penalty": 313.503,
+          "budget_ms": 6000.0
+        }
+      },
+      {
+        "round": 7,
+        "scene": "high_noise",
+        "agent": "Trainer",
+        "message": "candidate rejected: 筛选无改进：best=313.50 vs baseline=313.50",
+        "metrics": {
+          "decision": "reject"
+        }
+      },
+      {
+        "round": 8,
+        "scene": "large",
+        "agent": "Strategy",
+        "message": "scene routed: large",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 8,
+        "scene": "large",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 933.22 (2000ms) / fine 623.62 (6000ms)",
+        "metrics": {
+          "coarse": 933.218,
+          "fine": 623.62,
+          "budget_ms": 6000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 8,
+        "scene": "large",
+        "agent": "Evaluator",
+        "message": "fine re-check: 2 leaders @ 6000ms, baseline 623.62",
+        "metrics": {
+          "avg_penalty": 623.62,
+          "budget_ms": 6000.0
+        }
+      },
+      {
+        "round": 8,
+        "scene": "large",
+        "agent": "Trainer",
+        "message": "candidate rejected: 筛选无改进：best=622.03 vs baseline=623.62",
+        "metrics": {
+          "decision": "reject"
+        }
+      },
+      {
+        "round": 9,
+        "scene": "low_willingness",
+        "agent": "Strategy",
+        "message": "scene routed: low_willingness",
+        "metrics": {
+          "mode": "code-lab"
+        }
+      },
+      {
+        "round": 9,
+        "scene": "low_willingness",
+        "agent": "Evaluator",
+        "message": "baselines: coarse 2777.67 (2000ms) / fine 1681.87 (8000ms)",
+        "metrics": {
+          "coarse": 2777.672,
+          "fine": 1681.872,
+          "budget_ms": 8000.0,
+          "valid": "2/2"
+        }
+      },
+      {
+        "round": 9,
+        "scene": "low_willingness",
+        "agent": "Code Evolution",
+        "message": "L4 improve_backup_allocation#1 [free] screened: 1688.23 vs 1681.87",
+        "metrics": {
+          "gain_pct": -0.38
+        }
+      }
+    ],
+    "latest_metrics": {
+      "backup": {
+        "name": "pretrain_r3_20260921_171808.zip",
+        "path": "backups\\pretrain_r3_20260921_171808.zip",
+        "sha256": "6d41264c98a28d58",
+        "manifest": {
+          "created_at": "2026-09-21T17:18:08",
+          "tag": "pretrain_r3",
+          "note": "before one-click mode=code-lab",
+          "round": 3,
+          "files": [
+            {
+              "path": "submission/solver.py",
+              "size": 72223,
+              "sha256": "7b8f41f29878cf0f0327beb92d0fdd9e19db7df1ef65896967e276eb2640b79b"
+            },
+            {
+              "path": "memory/current_state.json",
+              "size": 64522,
+              "sha256": "6e2ee583a9f02e6459ec7b0b0e28927b347363e6b4687f08c46b4f6fff92460e"
+            },
+            {
+              "path": "memory/params.json",
+              "size": 1372,
+              "sha256": "5995d50aff80a8769e7d18f346d6fbde28e73a1a2a8a5e5bdc39ab7b36a63929"
+            },
+            {
+              "path": "memory/Notes.md",
+              "size": 50133,
+              "sha256": "52a808a65b793b49fdc970d13d5c0b01c1048400fd92cc954429eda1b48fe49f"
+            },
+            {
+              "path": "memory/Handover.md",
+              "size": 15565,
+              "sha256": "32585c5cf82b9aabbbef1f737e31c092516b99240b577c4302c43418b097e246"
+            },
+            {
+              "path": "memory/trials.jsonl",
+              "size": 150103,
+              "sha256": "47456bde611c8361743a1b1c1a1e17f78c5281cd60d982fdba23ce81107acbb5"
+            },
+            {
+              "path": "memory/chat.jsonl",
+              "size": 233,
+              "sha256": "470bb722e7015c5943eda396927d4ad8b241eedaeb670147e51ddd20a0fe8138"
+            },
+            {
+              "path": "memory/experience.sqlite",
+              "size": 114688,
+              "sha256": "d199b2a6b0293f3d5ad1bd030342920cf97d80880166d3cea3076aabf30a436b"
+            },
+            {
+              "path": "logs/agent_activity.jsonl",
+              "size": 27136,
+              "sha256": "ecc9d2e8826e5c7312123d088e4a79fa2cdd8fe7cd058383dd7f79b03028bb11"
+            },
+            {
+              "path": "logs/llm_dialogue.jsonl",
+              "size": 233,
+              "sha256": "470bb722e7015c5943eda396927d4ad8b241eedaeb670147e51ddd20a0fe8138"
+            },
+            {
+              "path": "logs/code_changes.jsonl",
+              "size": 6633,
+              "sha256": "9ab6af6c181ff7c97fd233a512acd58d52379df6315299da7262d8099897c393"
+            },
+            {
+              "path": "logs/data_feedback.jsonl",
+              "size": 85607,
+              "sha256": "58a05c3c7f0b64072b04c920f85d3c0bd87bcbe37333208188e4a4dfa9be7776"
+            },
+            {
+              "path": "agent_core/learned_operators/op_large_scene_targeted_local_search.py",
+              "size": 399,
+              "sha256": "baf4967ed7cb888eee573ba40ee70ddd6005af955c059c6353fe4bd0e39f1769"
+            },
+            {
+              "path": "agent_core/learned_operators/op_large_scene_worst_metric_boost.py",
+              "size": 2315,
+              "sha256": "0448b120381e5c5d3c61789131ce3d2d39498d0d320b78d2b85488e22e568cec"
+            },
+            {
+              "path": "agent_core/learned_operators/op_large_scene_worst_metric_boost_v2.py",
+              "size": 1437,
+              "sha256": "a479b1501b4cf934722d04940ebe9ae1a7f0fb6d17833871f1fa5aaf00414287"
+            },
+            {
+              "path": "agent_core/learned_operators/op_large_scene_worst_metric_boost_v3.py",
+              "size": 1287,
+              "sha256": "670857cabe8a4ef9d2ac5d7b8f46421d2ce236fde615b1bf30a89d66ad068677"
+            },
+            {
+              "path": "agent_core/learned_operators/op_large_scene_worst_metric_boost_v4.py",
+              "size": 1580,
+              "sha256": "3501adda039231d9ebff864e3ce003d930ffd942ec5091039e61044446c6342b"
+            },
+            {
+              "path": "agent_core/learned_operators/op_large_scene_worst_metric_boost_v5.py",
+              "size": 1031,
+              "sha256": "f124e428beef6343699d2b89efbe11bdf5417a04dc93c76b4150fb92ca567830"
+            },
+            {
+              "path": "agent_core/learned_operators/op_large_scene_worst_metric_rebalance.py",
+              "size": 1197,
+              "sha256": "b945b461f61b0ddf18556206b11b619b3081e95ac21d804d71e4ac8e953cb6c5"
+            },
+            {
+              "path": "agent_core/learned_operators/op_scarce_couriers_expand_candidates_tighte.py",
+              "size": 1124,
+              "sha256": "8adcc78bb3eb066bd8209cb421da21c82c1156facf364622423c91700f678515"
+            },
+            {
+              "path": "agent_core/learned_operators/registry.json",
+              "size": 1628,
+              "sha256": "447de452c347dbdb1644a5cb5827d9688c181862a47397bf644c68c88efa83d6"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": [
+    {
+      "time": "boot",
+      "agent": "Leader",
+      "type": "system",
+      "message": "V5 hardfix loaded：一键训练入口已强制放在左侧第二项和顶部第一按钮。"
+    },
+    {
+      "time": "boot",
+      "agent": "Cockpit",
+      "type": "viz",
+      "message": "Cockpit 已默认加载柱状图、折线图、雷达图、热力图、场景地图。"
+    },
+    {
+      "time": "boot",
+      "agent": "Auditor",
+      "type": "guard",
+      "message": "一键回滚与训练前自动备份已启用。"
+    },
+    {
+      "time": "13:07:51",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r0_20260919_130751.zip / sha=2713bce3945fdd19"
+    },
+    {
+      "time": "13:07:51",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=safe-medium-only, rounds=2, backup=pretrain_r0_20260919_130751.zip"
+    },
+    {
+      "time": "13:07:51",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "13:07:51",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 未配置：使用确定性搜索，LLM 提案/归因跳过。"
+    },
+    {
+      "time": "13:08:34",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=2, candidates=5, elapsed=42.8s"
+    },
+    {
+      "time": "13:12:22",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r2_20260919_131222.zip / sha=e70c8bfb26e08113"
+    },
+    {
+      "time": "13:12:22",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=balanced, rounds=3, backup=pretrain_r2_20260919_131222.zip"
+    },
+    {
+      "time": "13:12:22",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "13:12:22",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 未配置：使用确定性搜索，LLM 提案/归因跳过。"
+    },
+    {
+      "time": "13:13:03",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "建立 champion 基线 anchor:large_seed301: penalty=626.319027, covered=40/40"
+    },
+    {
+      "time": "13:13:21",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "建立 champion 基线 holdout:high_noise: penalty=299.69055, covered=30/30"
+    },
+    {
+      "time": "13:13:53",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=3, candidates=7, elapsed=91.1s"
+    },
+    {
+      "time": "13:16:09",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "手动评估 anchor：penalty=626.319027，covered=40/40，耗时=8911.5ms"
+    },
+    {
+      "time": "13:17:14",
+      "agent": "User",
+      "type": "chat",
+      "message": "hello"
+    },
+    {
+      "time": "13:17:14",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek API key 未设置。请设置本地环境变量 DEEPSEEK_API_KEY；不要写入代码或 zip。"
+    },
+    {
+      "time": "13:51:34",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r3_20260919_135134.zip / sha=c6000ee01a7f5b68"
+    },
+    {
+      "time": "13:51:34",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=balanced, rounds=2, backup=pretrain_r3_20260919_135134.zip"
+    },
+    {
+      "time": "13:51:34",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "13:51:34",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 未配置：使用确定性搜索，LLM 提案/归因/算子合成跳过。"
+    },
+    {
+      "time": "13:52:06",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=2, candidates=4, elapsed=32.2s"
+    },
+    {
+      "time": "13:52:24",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：ui_backup_20260919_135224.zip / sha=d263ba2e67948196"
+    },
+    {
+      "time": "13:57:27",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r2_20260919_135726.zip / sha=ce482fd8a71db348"
+    },
+    {
+      "time": "13:57:27",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=balanced, rounds=6, backup=pretrain_r2_20260919_135726.zip"
+    },
+    {
+      "time": "13:57:27",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "13:57:27",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "13:59:21",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "建立 champion 基线 holdout:large: penalty=618.666026, covered=40/40"
+    },
+    {
+      "time": "14:02:33",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=6, candidates=12, elapsed=306.8s"
+    },
+    {
+      "time": "14:05:40",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r6_20260919_140540.zip / sha=b474a58b9eb9c93e"
+    },
+    {
+      "time": "14:05:40",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=balanced, rounds=6, backup=pretrain_r6_20260919_140540.zip"
+    },
+    {
+      "time": "14:05:40",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "14:05:40",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "14:07:55",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `large_scene_targeted_local_search`：新算子已注册并加入 UCB 池（op_large_scene_targeted_local_search.py）；示例提案 CONFIG['local_search_budget_ms']=3550.0, CONFIG['max_exact_replace_tasks']=11"
+    },
+    {
+      "time": "14:09:02",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "建立 champion 基线 protected:tiny: penalty=67.940322, covered=6/6"
+    },
+    {
+      "time": "14:09:08",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "建立 champion 基线 protected:small: penalty=180.285041, covered=15/15"
+    },
+    {
+      "time": "14:10:50",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。"
+    },
+    {
+      "time": "14:11:06",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=6, candidates=13, elapsed=326.5s"
+    },
+    {
+      "time": "15:11:26",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r6_20260919_151126.zip / sha=cd9cd45232cef194"
+    },
+    {
+      "time": "15:11:26",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=balanced, rounds=8, backup=pretrain_r6_20260919_151126.zip"
+    },
+    {
+      "time": "15:11:26",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "15:11:26",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "15:12:50",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。"
+    },
+    {
+      "time": "15:14:59",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。"
+    },
+    {
+      "time": "15:17:04",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=8, candidates=24, elapsed=338.1s"
+    },
+    {
+      "time": "15:21:08",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r8_20260919_152108.zip / sha=2b3ea54be5e6bc2a"
+    },
+    {
+      "time": "15:21:08",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=balanced, rounds=12, backup=pretrain_r8_20260919_152108.zip"
+    },
+    {
+      "time": "15:21:08",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "15:21:08",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 未配置：使用确定性搜索，LLM 提案/归因/算子合成跳过。"
+    },
+    {
+      "time": "15:22:11",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "建立 champion 基线 holdout:medium: penalty=405.134658, covered=30/30"
+    },
+    {
+      "time": "15:23:08",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM key 未配置，跳过算子合成（L1/L2 继续运行）。"
+    },
+    {
+      "time": "15:25:26",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM key 未配置，跳过算子合成（L1/L2 继续运行）。"
+    },
+    {
+      "time": "15:27:35",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM key 未配置，跳过算子合成（L1/L2 继续运行）。"
+    },
+    {
+      "time": "15:29:09",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "建立 champion 基线 holdout:low_willingness: penalty=1697.709206, covered=40/40"
+    },
+    {
+      "time": "15:30:22",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM key 未配置，跳过算子合成（L1/L2 继续运行）。"
+    },
+    {
+      "time": "15:30:47",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=12, candidates=40, elapsed=578.7s"
+    },
+    {
+      "time": "15:41:21",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r12_20260919_154121.zip / sha=7ac406e2948c61d9"
+    },
+    {
+      "time": "15:41:21",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=balanced, rounds=10, backup=pretrain_r12_20260919_154121.zip"
+    },
+    {
+      "time": "15:41:22",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "15:41:22",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 未配置：使用确定性搜索，LLM 提案/归因/算子合成跳过。"
+    },
+    {
+      "time": "15:43:15",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM key 未配置，跳过算子合成（L1/L2 继续运行）。"
+    },
+    {
+      "time": "15:46:28",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM key 未配置，跳过算子合成（L1/L2 继续运行）。"
+    },
+    {
+      "time": "15:49:12",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM key 未配置，跳过算子合成（L1/L2 继续运行）。"
+    },
+    {
+      "time": "15:51:45",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=10, candidates=35, elapsed=623.2s"
+    },
+    {
+      "time": "16:04:29",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r10_20260919_160429.zip / sha=e3b9b0cecf261262"
+    },
+    {
+      "time": "16:04:29",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=balanced, rounds=16, backup=pretrain_r10_20260919_160429.zip"
+    },
+    {
+      "time": "16:04:29",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "16:04:29",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "16:10:28",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。 API 错误：TimeoutError: The read operation timed out"
+    },
+    {
+      "time": "16:17:55",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `scarce_couriers_expand_candidates_tighte`：新算子已注册并加入 UCB 池（op_scarce_couriers_expand_candidates_tighte.py）；示例提案 CONFIG['pair_top_k']=41, CONFIG['triple_top_k']=25, CONFIG['max_exact_replace_tasks']=10, CONFIG['max_candidates_per_mask']=28, CONFIG['special_max_candidates_per_mask']=7, CONFIG['safety_margin_ms']=365.1"
+    },
+    {
+      "time": "16:22:42",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `large_scene_worst_metric_rebalance`：新算子已注册并加入 UCB 池（op_large_scene_worst_metric_rebalance.py）；示例提案 CONFIG['local_search_budget_ms']=2307.0, CONFIG['normal_topology_generated_limit']=22, CONFIG['pair_top_k']=48, CONFIG['triple_top_k']=36"
+    },
+    {
+      "time": "16:29:42",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。 API 错误：TimeoutError: The read operation timed out"
+    },
+    {
+      "time": "16:36:39",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。 API 错误：IncompleteRead: IncompleteRead(0 bytes read)"
+    },
+    {
+      "time": "16:38:33",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=16, candidates=64, elapsed=2043.8s"
+    },
+    {
+      "time": "23:30:53",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r16_20260919_233053.zip / sha=04c22119ab667568"
+    },
+    {
+      "time": "23:30:53",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=5, backup=pretrain_r16_20260919_233053.zip"
+    },
+    {
+      "time": "23:30:53",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "23:30:53",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "23:35:13",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `large_scene_worst_metric_boost`：新算子已注册并加入 UCB 池（op_large_scene_worst_metric_boost.py）；示例提案 CONFIG['local_search_budget_ms']=3516.0, CONFIG['triple_top_k']=29"
+    },
+    {
+      "time": "23:40:50",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r4_20260919_234050.zip / sha=88ab0f4762046f95"
+    },
+    {
+      "time": "23:40:50",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=4, backup=pretrain_r4_20260919_234050.zip"
+    },
+    {
+      "time": "23:40:50",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "23:40:50",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "23:54:03",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `large_scene_worst_metric_boost_v2`：新算子已注册并加入 UCB 池（op_large_scene_worst_metric_boost_v2.py）；示例提案 CONFIG['local_search_budget_ms']=1400.0, CONFIG['normal_topology_top_k']=10, CONFIG['normal_topology_generated_limit']=18, CONFIG['normal_preview_scan_per_primary']=30, CONFIG['pair_top_k']=44, CONFIG['triple_top_k']=32, CONFIG['max_exact_replace_tasks']=11"
+    },
+    {
+      "time": "00:07:24",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=8, candidates=16, elapsed=1594.4s"
+    },
+    {
+      "time": "00:34:29",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r4_20260920_003429.zip / sha=66b9dc77d90aecc6"
+    },
+    {
+      "time": "00:34:30",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=6, backup=pretrain_r4_20260920_003429.zip"
+    },
+    {
+      "time": "00:34:30",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "00:34:30",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "00:46:28",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `large_scene_worst_metric_boost_v3`：新算子已注册并加入 UCB 池（op_large_scene_worst_metric_boost_v3.py）；示例提案 CONFIG['normal_preview_backup_cap']=3"
+    },
+    {
+      "time": "01:01:19",
+      "agent": "Evaluator",
+      "type": "eval",
+      "message": "建立 champion 基线 holdout:scarce_couriers: penalty=1224.65855, covered=40/40"
+    },
+    {
+      "time": "01:04:30",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：AST 白名单拒绝：module must define exactly one function: mutate_config"
+    },
+    {
+      "time": "01:04:46",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "strategy_key 补丁合成未成功：LLM 未返回可解析的补丁 JSON。 API 错误：HTTPError: HTTP Error 402: Payment Required"
+    },
+    {
+      "time": "01:05:43",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=11, candidates=24, elapsed=1873.3s"
+    },
+    {
+      "time": "01:56:31",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r6_20260920_015631.zip / sha=40aa04aee51e8cf4"
+    },
+    {
+      "time": "01:56:31",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=4, backup=pretrain_r6_20260920_015631.zip"
+    },
+    {
+      "time": "01:56:31",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "01:56:31",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "01:56:47",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "local_search#1 补丁合成未成功：LLM 未返回可解析的补丁 JSON。 API 错误：HTTPError: HTTP Error 402: Payment Required"
+    },
+    {
+      "time": "01:56:48",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "local_search#2 补丁合成未成功：LLM 未返回可解析的补丁 JSON。 API 错误：HTTPError: HTTP Error 402: Payment Required"
+    },
+    {
+      "time": "01:56:50",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "local_search#3 补丁合成未成功：LLM 未返回可解析的补丁 JSON。 API 错误：HTTPError: HTTP Error 402: Payment Required"
+    },
+    {
+      "time": "01:57:47",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "improve_low_with_multi_options#1 补丁合成未成功：LLM 未返回可解析的补丁 JSON。 API 错误：HTTPError: HTTP Error 402: Payment Required"
+    },
+    {
+      "time": "01:58:30",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。 API 错误：HTTPError: HTTP Error 402: Payment Required"
+    },
+    {
+      "time": "01:58:48",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "improve_regular_with_multi_options#1 补丁合成未成功：LLM 未返回可解析的补丁 JSON。 API 错误：HTTPError: HTTP Error 402: Payment Required"
+    },
+    {
+      "time": "01:59:49",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "choose_probability_backups#1 补丁合成未成功：LLM 未返回可解析的补丁 JSON。 API 错误：HTTPError: HTTP Error 402: Payment Required"
+    },
+    {
+      "time": "02:00:41",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=4, candidates=16, elapsed=249.8s"
+    },
+    {
+      "time": "20:54:44",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r1_20260920_205444.zip / sha=8123f0c1eb3504ce"
+    },
+    {
+      "time": "20:54:44",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=6, backup=pretrain_r1_20260920_205444.zip"
+    },
+    {
+      "time": "20:54:44",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "20:54:44",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "20:58:39",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "local_search#1 补丁合成未成功：AST 白名单拒绝：construct not allowed: Nonlocal"
+    },
+    {
+      "time": "21:01:58",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "local_search#2 补丁合成未成功：AST 白名单拒绝：construct not allowed: Try"
+    },
+    {
+      "time": "21:05:57",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "local_search#3 补丁合成未成功：补丁与原实现相似度 93%，过于保守（等价改写是失败），已打回。"
+    },
+    {
+      "time": "21:10:05",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "improve_low_with_multi_options#1 补丁合成未成功：AST 白名单拒绝：construct not allowed: Try"
+    },
+    {
+      "time": "21:12:24",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。 API 错误：TimeoutError: The read operation timed out"
+    },
+    {
+      "time": "21:14:56",
+      "agent": "User",
+      "type": "control",
+      "message": "用户请求中止训练。"
+    },
+    {
+      "time": "21:15:33",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r3_20260920_211533.zip / sha=21fa43194bbb237f"
+    },
+    {
+      "time": "21:15:33",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=6, backup=pretrain_r3_20260920_211533.zip"
+    },
+    {
+      "time": "21:15:33",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "21:15:33",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "21:33:19",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `large_scene_worst_metric_boost_v4`：新算子已注册并加入 UCB 池（op_large_scene_worst_metric_boost_v4.py）；示例提案 CONFIG['local_search_budget_ms']=4000.0, CONFIG['normal_preview_scan_per_primary']=30, CONFIG['normal_topology_top_k']=9, CONFIG['normal_topology_generated_limit']=16, CONFIG['pair_top_k']=46, CONFIG['triple_top_k']=32, CONFIG['max_exact_replace_tasks']=10"
+    },
+    {
+      "time": "22:03:02",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r6_20260920_220302.zip / sha=2485af728c443e65"
+    },
+    {
+      "time": "22:03:02",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=2, backup=pretrain_r6_20260920_220302.zip"
+    },
+    {
+      "time": "22:03:02",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "22:03:02",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "22:19:43",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=6, candidates=8, elapsed=1000.4s"
+    },
+    {
+      "time": "22:23:43",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r2_20260920_222343.zip / sha=054944c6e8b32352"
+    },
+    {
+      "time": "22:23:43",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=1, backup=pretrain_r2_20260920_222343.zip"
+    },
+    {
+      "time": "22:23:43",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "22:23:43",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "22:29:41",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "local_search#2 补丁合成未成功：补丁与原实现相似度 93%，过于保守（等价改写是失败），已打回。"
+    },
+    {
+      "time": "22:34:32",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=3, candidates=4, elapsed=649.4s"
+    },
+    {
+      "time": "22:38:56",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r1_20260920_223856.zip / sha=cc76d811c6359065"
+    },
+    {
+      "time": "22:38:56",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=3, backup=pretrain_r1_20260920_223856.zip"
+    },
+    {
+      "time": "22:38:56",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "22:38:56",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "22:44:46",
+      "agent": "Code Evolution",
+      "type": "l4",
+      "message": "local_search#2 补丁合成未成功：补丁与原实现相似度 90%，过于保守（等价改写是失败），已打回。"
+    },
+    {
+      "time": "22:50:59",
+      "agent": "User",
+      "type": "control",
+      "message": "用户请求中止训练。"
+    },
+    {
+      "time": "22:52:53",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r2_20260920_225253.zip / sha=f1c7e571230d0520"
+    },
+    {
+      "time": "22:52:53",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=1, backup=pretrain_r2_20260920_225253.zip"
+    },
+    {
+      "time": "22:52:53",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "22:52:53",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "23:06:17",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：l4_promote_r1_20260920_230617.zip / sha=08114c7795b4dfb0"
+    },
+    {
+      "time": "23:06:18",
+      "agent": "Leader",
+      "type": "promote",
+      "message": "Round 1: L4 promoted rewrite of `local_search` (anchor 626.32, backup l4_promote_r1_20260920_230617.zip)"
+    },
+    {
+      "time": "23:06:18",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=0, rejected=2, candidates=0, elapsed=805.1s"
+    },
+    {
+      "time": "23:14:31",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r1_20260920_231431.zip / sha=42080c4c858a2242"
+    },
+    {
+      "time": "23:14:31",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=3, backup=pretrain_r1_20260920_231431.zip"
+    },
+    {
+      "time": "23:14:31",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "23:14:31",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "23:27:29",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `large_scene_worst_metric_boost_v5`：新算子已注册并加入 UCB 池（op_large_scene_worst_metric_boost_v5.py）；示例提案 CONFIG['local_search_budget_ms']=3700.0, CONFIG['normal_preview_scan_per_primary']=36, CONFIG['normal_topology_top_k']=10, CONFIG['normal_topology_generated_limit']=18, CONFIG['pair_top_k']=44, CONFIG['triple_top_k']=32, CONFIG['max_exact_replace_tasks']=10"
+    },
+    {
+      "time": "23:33:40",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：promote_r3_20260920_233340.zip / sha=77f5edcb64163bfc"
+    },
+    {
+      "time": "23:33:42",
+      "agent": "Leader",
+      "type": "promote",
+      "message": "Round 3: promoted CONFIG['local_search_budget_ms']=1400.0, CONFIG['normal_topology_top_k']=10, CONFIG['normal_topology_generated_limit']=18, CONFIG['normal_preview_scan_per_primary']=30, CONFIG['pair_top_k']=44, CONFIG['triple_top_k']=32, CONFIG['max_exact_replace_tasks']=11 (anchor 626.32, backup promote_r3_20260920_233340.zip)"
+    },
+    {
+      "time": "23:33:42",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练结束：promoted=1, rejected=5, candidates=12, elapsed=1151.1s"
+    },
+    {
+      "time": "17:18:09",
+      "agent": "Auditor",
+      "type": "backup",
+      "message": "备份完成：pretrain_r3_20260921_171808.zip / sha=6d41264c98a28d58"
+    },
+    {
+      "time": "17:18:09",
+      "agent": "Leader",
+      "type": "train",
+      "message": "一键训练启动（真实评估循环）：mode=code-lab, rounds=9, backup=pretrain_r3_20260921_171808.zip"
+    },
+    {
+      "time": "17:18:09",
+      "agent": "Data Seed",
+      "type": "data",
+      "message": "case bank ready: 18 cases (train/holdout/protected, scenes: medium, high_noise, large, low_willingness, scarce_couriers)."
+    },
+    {
+      "time": "17:18:09",
+      "agent": "LLM Reflector",
+      "type": "llm",
+      "message": "DeepSeek 已配置 (https://api.deepseek.com|deepseek-v4-pro)"
+    },
+    {
+      "time": "17:22:47",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。 API 错误：TimeoutError: The read operation timed out"
+    },
+    {
+      "time": "17:40:21",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "算子合成未成功：LLM 未返回可解析的算子 JSON。 API 错误：TimeoutError: The read operation timed out"
+    },
+    {
+      "time": "17:45:34",
+      "agent": "Meta Programmer",
+      "type": "rsi",
+      "message": "自我注入新算子 `low_willingness_worst_metric_boost`：新算子已注册并加入 UCB 池（op_low_willingness_worst_metric_boost.py）；示例提案 CONFIG['safety_margin_ms']=561.0, CONFIG['pair_top_k']=35, CONFIG['triple_top_k']=26"
+    }
+  ],
+  "forensics": [
+    {
+      "time": "17:45:34",
+      "scene": "RSI-operator",
+      "finding": "Round 9 元步：Agent 为自己编写并注册了新提案算子 `low_willingness_worst_metric_boost`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `low_willingness_worst_metric_boost`"
+    },
+    {
+      "time": "23:33:42",
+      "scene": "large",
+      "finding": "Round 3 晋升（large_scene_worst_metric_boost_v2([filtered: 1])）：anchor 626.32 -> 626.32, holdout 618.67 -> 616.89，保护场景无回退。",
+      "severity": "info",
+      "wrong_code": "local_search_budget_ms=2800.0 / normal_topology_top_k=6 / normal_topology_generated_limit=10 / normal_preview_scan_per_primary=18 / pair_top_k=28 / triple_top_k=20 / max_exact_replace_tasks=8",
+      "fixed_code": "CONFIG['local_search_budget_ms']=1400.0, CONFIG['normal_topology_top_k']=10, CONFIG['normal_topology_generated_limit']=18, CONFIG['normal_preview_scan_per_primary']=30, CONFIG['pair_top_k']=44, CONFIG['triple_top_k']=32, CONFIG['max_exact_replace_tasks']=11"
+    },
+    {
+      "time": "23:27:29",
+      "scene": "RSI-operator",
+      "finding": "Round 3 元步：Agent 为自己编写并注册了新提案算子 `large_scene_worst_metric_boost_v5`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `large_scene_worst_metric_boost_v5`"
+    },
+    {
+      "time": "23:20:42",
+      "scene": "protected:small",
+      "finding": "候选（large_scene_worst_metric_boost）在保护场景 small 上配对回退 +2.09 超容忍（容忍=0.80，anchor_gain=0.00，同负载基线 180.738746），已拒绝晋升。",
+      "severity": "danger",
+      "wrong_code": "promote(CONFIG['pair_top_k']=34)",
+      "fixed_code": "keep CONFIG unchanged (protected threshold preserved)"
+    },
+    {
+      "time": "23:06:18",
+      "scene": "medium",
+      "finding": "Round 1 L4 晋升：Agent 重写了 solver 的 `local_search` 函数（l4:local_search#1(perturbation restarts with best-so-far ret；anchor 626.32 -> 626.32，保护场景无回退）。依据：Implemented perturbation restarts with best-so-far retention: when strict improvement stalls, randomly remove 1-3 incumbents, exact-cover freed masks with slight score slack to permit occasionally worse moves, then re-improve and retain the best solution. Deadlines and budget are checked in all loop",
+      "severity": "info",
+      "wrong_code": "def local_search (原实现前6行)\ndef local_search(ctx, selected, deadline_ms):\n    current = list(selected)\n    total_tasks = _count_bits(ctx.all_task_mask)\n    current_eval = evaluate(current, total_tasks)\n    start_ms = _now_ms()\n    budget = CONFIG['local_search_budget_ms']\n...",
+      "fixed_code": "def local_search (新实现前6行)\ndef local_search(ctx, selected, deadline_ms):\n    current = list(selected)\n    total_tasks = _count_bits(ctx.all_task_mask)\n    current_eval = evaluate(current, total_tasks)\n    best = list(current)\n    best_eval = current_eval\n..."
+    },
+    {
+      "time": "22:49:58",
+      "scene": "protected:small",
+      "finding": "候选（large_scene_worst_metric_rebalance([filtered: 1])）在保护场景 small 上回退超容忍（容忍=0.80，anchor_gain=0.00）：180.285041 -> 182.627466，已拒绝晋升。",
+      "severity": "danger",
+      "wrong_code": "promote(CONFIG['normal_topology_generated_limit']=12, CONFIG['pair_top_k']=44)",
+      "fixed_code": "keep CONFIG unchanged (protected threshold preserved)"
+    },
+    {
+      "time": "22:48:30",
+      "scene": "protected:small",
+      "finding": "L4 补丁（l4:local_search#1(perturbation restarts with best-so-far retention)）在保护场景 small 上回退超容忍（容忍=0.80），已拒绝。",
+      "severity": "danger",
+      "wrong_code": "splice local_search (l4 patch r1)",
+      "fixed_code": "keep local_search unchanged"
+    },
+    {
+      "time": "22:48:14",
+      "scene": "protected:small",
+      "finding": "L4 补丁（l4:local_search#3(batching several candidate replacements per remo)）在保护场景 small 上回退超容忍（容忍=0.80），已拒绝。",
+      "severity": "danger",
+      "wrong_code": "splice local_search (l4 patch r1)",
+      "fixed_code": "keep local_search unchanged"
+    },
+    {
+      "time": "21:33:19",
+      "scene": "RSI-operator",
+      "finding": "Round 3 元步：Agent 为自己编写并注册了新提案算子 `large_scene_worst_metric_boost_v4`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `large_scene_worst_metric_boost_v4`"
+    },
+    {
+      "time": "00:46:28",
+      "scene": "RSI-operator",
+      "finding": "Round 3 元步：Agent 为自己编写并注册了新提案算子 `large_scene_worst_metric_boost_v3`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `large_scene_worst_metric_boost_v3`"
+    },
+    {
+      "time": "23:54:03",
+      "scene": "RSI-operator",
+      "finding": "Round 3 元步：Agent 为自己编写并注册了新提案算子 `large_scene_worst_metric_boost_v2`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `large_scene_worst_metric_boost_v2`"
+    },
+    {
+      "time": "23:35:13",
+      "scene": "RSI-operator",
+      "finding": "Round 3 元步：Agent 为自己编写并注册了新提案算子 `large_scene_worst_metric_boost`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `large_scene_worst_metric_boost`"
+    },
+    {
+      "time": "16:22:42",
+      "scene": "RSI-operator",
+      "finding": "Round 9 元步：Agent 为自己编写并注册了新提案算子 `large_scene_worst_metric_rebalance`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `large_scene_worst_metric_rebalance`"
+    },
+    {
+      "time": "16:17:55",
+      "scene": "RSI-operator",
+      "finding": "Round 6 元步：Agent 为自己编写并注册了新提案算子 `scarce_couriers_expand_candidates_tighte`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `scarce_couriers_expand_candidates_tighte`"
+    },
+    {
+      "time": "14:09:12",
+      "scene": "protected:small",
+      "finding": "候选（random_mutate）在保护场景 small 上回退：180.285041 -> 180.95057，已拒绝晋升。",
+      "severity": "danger",
+      "wrong_code": "promote(CONFIG['local_search_budget_ms']=3211.3, CONFIG['triple_top_k']=12)",
+      "fixed_code": "keep CONFIG unchanged (protected threshold preserved)"
+    },
+    {
+      "time": "14:07:55",
+      "scene": "RSI-operator",
+      "finding": "Round 3 元步：Agent 为自己编写并注册了新提案算子 `large_scene_targeted_local_search`（AST 白名单 + 子进程沙箱冒烟通过）。",
+      "severity": "info",
+      "wrong_code": "operator pool = builtin ops",
+      "fixed_code": "operator pool += learned op `large_scene_targeted_local_search`"
+    },
+    {
+      "scene": "large",
+      "finding": "large polish 曾导致 large301 退化，因此默认不写入 solver，只在 anchor 上观察。",
+      "severity": "warning",
+      "wrong_code": "if scene == 'large': run_aggressive_lns(best, budget=3000)",
+      "fixed_code": "if scene == 'large' and params.large.enabled: run_light_repair_only(best)"
+    },
+    {
+      "scene": "small/tiny",
+      "finding": "small exact 曾造成分数崩盘，默认冻结。",
+      "severity": "danger",
+      "wrong_code": "exact_search(objective='proxy_penalty')",
+      "fixed_code": "return stable_baseline_solution()"
+    },
+    {
+      "scene": "scarce",
+      "finding": "scarce 激进 LNS 会破坏合单结构，默认禁止 risky_lns。",
+      "severity": "danger",
+      "wrong_code": "scarce: remove4_lns + backup_expand",
+      "fixed_code": "scarce: conservative_bundle_guard + no_regression"
+    }
+  ],
+  "charts": {
+    "trend": [],
+    "radar": [
+      {
+        "axis": "覆盖",
+        "value": 98
+      },
+      {
+        "axis": "成本",
+        "value": 83
+      },
+      {
+        "axis": "可靠",
+        "value": 76
+      },
+      {
+        "axis": "速度",
+        "value": 89
+      },
+      {
+        "axis": "简洁",
+        "value": 69
+      },
+      {
+        "axis": "安全",
+        "value": 95
+      }
+    ],
+    "heatmap": [
+      [
+        0.72,
+        0.84,
+        0.31,
+        0.18,
+        0.44
+      ],
+      [
+        0.61,
+        0.79,
+        0.42,
+        0.28,
+        0.36
+      ],
+      [
+        0.88,
+        0.66,
+        0.55,
+        0.23,
+        0.52
+      ],
+      [
+        0.33,
+        0.45,
+        0.81,
+        0.76,
+        0.27
+      ],
+      [
+        0.2,
+        0.35,
+        0.41,
+        0.69,
+        0.91
+      ]
+    ]
+  },
+  "rsi": {
+    "operators": {
+      "random_mutate": {
+        "kind": "builtin",
+        "uses": 86,
+        "wins": 11,
+        "win_rate": 0.128,
+        "avg_gain_pct": 0.28,
+        "ucb": 1.331,
+        "born_round": 0
+      },
+      "strategy_jitter": {
+        "kind": "builtin",
+        "uses": 85,
+        "wins": 10,
+        "win_rate": 0.118,
+        "avg_gain_pct": -0.11,
+        "ucb": 1.335,
+        "born_round": 0
+      },
+      "crossover": {
+        "kind": "builtin",
+        "uses": 85,
+        "wins": 29,
+        "win_rate": 0.341,
+        "avg_gain_pct": -0.66,
+        "ucb": 1.329,
+        "born_round": 0
+      },
+      "leverage_guided": {
+        "kind": "builtin",
+        "uses": 87,
+        "wins": 21,
+        "win_rate": 0.241,
+        "avg_gain_pct": 0.52,
+        "ucb": 1.326,
+        "born_round": 0
+      },
+      "llm_propose": {
+        "kind": "llm",
+        "uses": 17,
+        "wins": 7,
+        "win_rate": 0.412,
+        "avg_gain_pct": -0.05,
+        "ucb": 2.986,
+        "born_round": 0
+      },
+      "strategy_evolution": {
+        "kind": "builtin",
+        "uses": 0,
+        "wins": 0,
+        "win_rate": 0.0,
+        "avg_gain_pct": 0.0,
+        "ucb": 0.5,
+        "born_round": 0
+      },
+      "llm_strategies": {
+        "kind": "llm",
+        "uses": 25,
+        "wins": 6,
+        "win_rate": 0.24,
+        "avg_gain_pct": -0.07,
+        "ucb": 2.462,
+        "born_round": 0
+      },
+      "code_evolution": {
+        "kind": "l4",
+        "uses": 36,
+        "wins": 18,
+        "win_rate": 0.5,
+        "avg_gain_pct": -Infinity,
+        "ucb": -Infinity,
+        "born_round": 0
+      },
+      "large_scene_targeted_local_search": {
+        "kind": "synthesized",
+        "uses": 29,
+        "wins": 3,
+        "win_rate": 0.103,
+        "avg_gain_pct": -1.36,
+        "ucb": 2.273,
+        "born_round": 3
+      },
+      "large_scene_worst_metric_boost": {
+        "kind": "synthesized",
+        "uses": 51,
+        "wins": 16,
+        "win_rate": 0.314,
+        "avg_gain_pct": 0.03,
+        "ucb": 1.725,
+        "born_round": 3
+      },
+      "large_scene_worst_metric_boost_v2": {
+        "kind": "synthesized",
+        "uses": 10,
+        "wins": 9,
+        "win_rate": 0.9,
+        "avg_gain_pct": 2.25,
+        "ucb": 3.917,
+        "born_round": 3
+      },
+      "large_scene_worst_metric_boost_v3": {
+        "kind": "synthesized",
+        "uses": 0,
+        "wins": 0,
+        "win_rate": 0.0,
+        "avg_gain_pct": 0.0,
+        "ucb": 0.5,
+        "born_round": 3
+      },
+      "large_scene_worst_metric_boost_v4": {
+        "kind": "synthesized",
+        "uses": 6,
+        "wins": 0,
+        "win_rate": 0.0,
+        "avg_gain_pct": 0.0,
+        "ucb": 5.028,
+        "born_round": 3
+      },
+      "large_scene_worst_metric_boost_v5": {
+        "kind": "synthesized",
+        "uses": 0,
+        "wins": 0,
+        "win_rate": 0.0,
+        "avg_gain_pct": 0.0,
+        "ucb": 0.5,
+        "born_round": 3
+      },
+      "scarce_couriers_expand_candidates_tighte": {
+        "kind": "synthesized",
+        "uses": 6,
+        "wins": 0,
+        "win_rate": 0.0,
+        "avg_gain_pct": -0.45,
+        "ucb": 5.023,
+        "born_round": 6
+      },
+      "large_scene_worst_metric_rebalance": {
+        "kind": "synthesized",
+        "uses": 96,
+        "wins": 34,
+        "win_rate": 0.354,
+        "avg_gain_pct": 0.07,
+        "ucb": 1.258,
+        "born_round": 9
+      },
+      "low_willingness_worst_metric_boost": {
+        "kind": "synthesized",
+        "uses": 0,
+        "wins": 0,
+        "win_rate": 0.0,
+        "avg_gain_pct": 0.0,
+        "ucb": 0.5,
+        "born_round": 9
+      }
+    },
+    "summary": {
+      "trials": 619,
+      "promoted": 2,
+      "operators": 17,
+      "best_screen": {
+        "scene": "large",
+        "op": "leverage_guided",
+        "gain_pct": 27.25
+      }
+    },
+    "learned_ops": [
+      "large_scene_targeted_local_search",
+      "scarce_couriers_expand_candidates_tighte",
+      "large_scene_worst_metric_rebalance",
+      "large_scene_worst_metric_boost",
+      "large_scene_worst_metric_boost_v2",
+      "large_scene_worst_metric_boost_v3",
+      "large_scene_worst_metric_boost_v4",
+      "large_scene_worst_metric_boost_v5",
+      "low_willingness_worst_metric_boost"
+    ]
+  }
+}
