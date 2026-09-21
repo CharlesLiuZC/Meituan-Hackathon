@@ -692,3 +692,18 @@ example/large_seed301.txt
 3. 然后看 `agent/tools.py`，理解 Agent 如何测试策略。
 4. 最后看 `agent/graph.py`，理解 LangGraph 如何组织 LLM、工具和写回流程。
 5. 如果要生成数据，再看 `generartor.py`。
+
+---
+
+## RSD-Marvis AutoSolver Studio（四层 RSI 自迭代 Agent，2026-09 更新）
+
+`rsd_marvis_autosolver_studio/` 是本地训练工作台，实现了递归自改进（RSI）闭环：
+
+- **L1** solver CONFIG 进化（白名单变异 → 全预算验证 → 配对保护门禁 → 外科手术式写回）
+- **L2** UCB bandit 提案算子策略学习（sqlite 经验库，600+ 试验）
+- **L3** LLM 为 Agent 自己编写新提案算子（AST 白名单 + 子进程沙箱三关后入池，池内 9+ 个）
+- **L4** Agent 在沙箱中改写 solver 的求解函数本身（锦标赛合成 + 补丁档案 + 六道门禁）
+
+已实弹达成两次晋升：Agent 编写的 `local_search`（扰动重启）写进提交 solver（medium holdout
+405.13→403.07）；L3 自写算子提案的 7 键 CONFIG 组合（large holdout 618.67→616.89）。
+当前 champion：anchor 626.32（40/40 覆盖）。`python app.py` 启动（详见目录内 README）。
